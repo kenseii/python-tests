@@ -19,6 +19,7 @@ def build_cells(width, height):
 
     >>> cells = build_cells(2,2)
     >>> len(cells)
+    4
 
     """
     cells = []
@@ -29,6 +30,16 @@ def build_cells(width, height):
 
 
 def get_locations(cells):
+    """
+    Randomly pick starting locations for the monsters, door and player
+
+    >>> cells = build_cells(2,2)
+    >>> m,d,p = get_locations(cells)
+    >>> m != d and d != p
+    True
+    >>> d in cells
+    True
+    """
     monster = random.choice(cells)
     door = random.choice(cells)
     player = random.choice(cells)
@@ -40,6 +51,13 @@ def get_locations(cells):
 
 
 def get_moves(player):
+    """
+    Based on the player position, return the list of acceptable moves
+    >>> GAME_DIMENSIONS = (2,2)
+    >>> get_moves((0,2))
+    ['RIGHT', 'UP', 'DOWN']
+
+    """
     x, y = player
     moves = ['LEFT', 'RIGHT', 'UP', 'DOWN']
     if x == 0:
