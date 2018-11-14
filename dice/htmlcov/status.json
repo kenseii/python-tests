@@ -1,0 +1,39 @@
+{
+  "format": 1,
+  "version": "4.5.2",
+  "settings": "b3a0bff7154d5bbec34fcac359c54f68",
+  "files": {
+    "dice_py": {
+      "hash": "9bc85a2966d3c572ebb0cfac9dca1f3b",
+      "index": {
+        "nums": [
+          1,
+          50,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "html_filename": "dice_py.html",
+        "relative_filename": "dice.py"
+      }
+    },
+    "tests_py": {
+      "hash": "58245883e89c178bdbf5ee90b9e0c76e",
+      "index": {
+        "nums": [
+          1,
+          33,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "html_filename": "tests_py.html",
+        "relative_filename": "tests.py"
+      }
+    }
+  }
+}
