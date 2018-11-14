@@ -20,6 +20,11 @@ class DieTests(unittest.TestCase):
     def test_add(self):
         self.assertIsInstance(self.d6 + self.d8, int)
 
+    # test a dice to have one side
+    def test_bad_sides(self):
+        with self.assertRaises(ValueError):
+            dice.Die(1)
+
 
 class RollTests(unittest.TestCase):
     def setUp(self):
@@ -45,6 +50,10 @@ class RollTests(unittest.TestCase):
     def test_bad_description(self):
         with self.assertRaises(ValueError):
             dice.Roll('2b6')
+
+    # Adding tests to increase coverage
+    def test_adding(self):
+        self.assertEqual(self.hand1 + self.hand3, sum(self.hand1) + sum(self.hand3))
 
 
 if __name__ == "__main__":
