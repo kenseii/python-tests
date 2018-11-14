@@ -22,7 +22,7 @@ class MoveTests(unittest.TestCase):
     def test_not_equal(self):
         rock = moves.Rock()
         paper = moves.Paper()
-        self.assertNotEquals(rock,paper)
+        self.assertNotEqual(rock, paper)
 
 
 if __name__ =='__main__':
