@@ -10,10 +10,10 @@ class DieTests(unittest.TestCase):
         self.d8 = dice.Die(8)
 
     # this test method ensures that 6 sides dice has 6 sides
-    # it also ensures that in 8 sides dice there are values from 1,7
-    def test_createtion(self):
+    # it also ensures that in 6 sides dice there are values from 1,6
+    def test_creation(self):
         self.assertEqual(self.d6.sides, 6)
-        self.assertIn(self.d8.value, range(1, 7))
+        self.assertIn(self.d6.value, range(1, 7))
 
     # test to check if i can add dice instances together and get an integer
 
@@ -40,6 +40,11 @@ class RollTests(unittest.TestCase):
         # give this test die the value of what was in hand1
         test_die.value = self.hand1.results[0].value
         self.assertIn(test_die, self.hand1.results)
+
+    # This function is supposed to raise that error once tested
+    def test_bad_description(self):
+        with self.assertRaises(ValueError):
+            dice.Roll('2b6')
 
 
 if __name__ == "__main__":
