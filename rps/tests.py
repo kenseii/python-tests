@@ -35,5 +35,5 @@ class MoveTests(unittest.TestCase):
         self.assertLess(self.paper, self.scissors)
 
 
-if __name__ =='__main__':
+if __name__ == '__main__':
     unittest.main()
